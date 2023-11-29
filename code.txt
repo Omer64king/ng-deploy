@@ -1,0 +1,4 @@
+<h1> Hallo Welt</h1>
+<p>DAFFAFSDFASD </p>
+<img src="assets/cookie-7865426_1280.png" width="200px" height="200px">
+<button (click)="buttonClicked()"> Klicken </button>
