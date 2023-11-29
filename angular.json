@@ -48,7 +48,13 @@
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
                 }
+               
               ],
+              "optimization": {
+                "scripts": true,
+                 "styles": true,
+                 "fonts": false
+              },
               "outputHashing": "all"
             },
             "development": {
@@ -59,6 +65,7 @@
               "sourceMap": true,
               "namedChunks": true
             }
+          
           },
           "defaultConfiguration": "production"
         },
@@ -100,6 +107,7 @@
             "scripts": []
           }
         }
+       
       }
     }
   }
