@@ -14,7 +14,7 @@ export class AppComponent {
     'Ich esse gerne Kekse'
   ]; 
 
-  images = [
+  images2 = [
     './assets/img/hamster/1.jpg',
     './assets/img/hamster/2.jpg',
     './assets/img/hamster/3.jpg',
