@@ -15,10 +15,10 @@ export class AppComponent {
   ]; 
 
   images = [
-    'docs/assets/img/hamster/1.jpg',
-    'docs/assets/img/hamster/2.jpg',
-    'docs/assets/img/hamster/3.jpg',
-    'docs/assets/img/hamster/4.jpg'
+    './assets/img/hamster/1.jpg',
+    './assets/img/hamster/2.jpg',
+    './assets/img/hamster/3.jpg',
+    './assets/img/hamster/4.jpg'
   ]; 
 
   buttonClicked() {
