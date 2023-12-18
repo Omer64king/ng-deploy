@@ -4,9 +4,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class FriendService {
+ 
+
   names = [];
   texts = [];
   images = [];
+  openLogin = false; 
 
   constructor() { }
 
@@ -16,6 +19,10 @@ export class FriendService {
     this.images.push(image);
   }
 
+  openlogin(){
+    this.openLogin = true; 
+  }
+
   deletefriend (name:string, text:string, image:string ){
     console.log(this.names);
     let i = this.names.indexOf(name);
@@ -23,4 +30,6 @@ export class FriendService {
     this.images.splice(i, 1);
     this.texts.splice(i, 1);
   }
+  
+  
 }

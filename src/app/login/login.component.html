@@ -1,0 +1,4 @@
+<p *ngIf="fs.openLogin">login works!</p>
+<input *ngIf="fs.openLogin" type="text" placeholder="Enter E-mail" name = email [(ngModel)]="email">
+<input *ngIf="fs.openLogin" type="password" placeholder="Enter password" name = password  [(ngModel)]="password">
+<input *ngIf="fs.openLogin" (click)="Authentication();" type="submit"> 
