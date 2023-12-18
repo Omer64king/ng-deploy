@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { FriendService } from './friend.service';
+import { Client } from 'pg';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,6 +15,13 @@ export class AppComponent {
     'Ich esse gerne Kekse'
   ]; 
 
+
+  
+
+ 
+  
+
+  constructor(public fs: FriendService) {} 
   images2 = [
     './assets/img/hamster/1.jpg',
     './assets/img/hamster/2.jpg',

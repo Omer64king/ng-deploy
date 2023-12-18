@@ -10,7 +10,11 @@ import { ProfileRowComponent } from './profile-row/profile-row.component';
 import { FriendboxComponent } from './friendbox/friendbox.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
+import { LoginComponent } from './login/login.component';
 
+
+import { FormsModule } from '@angular/forms';  // <<<< import it here
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +23,17 @@ import {MatIconModule} from '@angular/material/icon';
     ProposalsComponent,
     ProfileRowComponent,
     FriendboxComponent,
+    LoginComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    BrowserModule, 
+    FormsModule,
+    HttpClientModule
     
   ],
   providers: [],

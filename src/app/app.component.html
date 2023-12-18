@@ -2,16 +2,18 @@
 
 <div class="flexrow">
   <div class="container">
-    <app-friendbox></app-friendbox>
+    <app-friendbox *ngIf="fs.openLogin === false"></app-friendbox>
     
-    <app-hamster-card  
-    *ngFor= "let i of [0, 1, 2, 3]" 
-    [text]="postTexts[i]" 
-    [imgtext]="images2[i]"
-    ></app-hamster-card>
-   
+    <div *ngIf="fs.openLogin === false">
+      <app-hamster-card 
+      *ngFor= "let i of [0, 1, 2, 3]"
+      [text]="postTexts[i]" 
+      [imgtext]="images2[i]"
+      ></app-hamster-card>
+    </div>
   </div>
-  <app-proposals> </app-proposals>
+  <app-proposals *ngIf="fs.openLogin === false"> </app-proposals>
+  <app-login *ngIf="fs.openLogin === true"></app-login>
 </div>
 
 
