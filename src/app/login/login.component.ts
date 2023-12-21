@@ -11,7 +11,7 @@ import { json } from 'stream/consumers';
 
 
 
-
+var cors = require('cors')
 
 @Component({
   selector: 'app-login',
