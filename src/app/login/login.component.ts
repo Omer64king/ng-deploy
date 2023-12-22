@@ -1,17 +1,24 @@
 import { Component } from '@angular/core';
 import {NgForm} from '@angular/forms';
 import { FriendService } from '../friend.service';
+import express, {Express, Router} from 'express'
 import fetch from 'node-fetch';
 import { Client } from 'pg';
 import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
 import {Request, Response} from 'express'; 
-import { get } from 'http';
+import { METHODS, get } from 'http';
 import { json } from 'stream/consumers';
 
 
 
 
+
 var cors = require('cors')
+
+
+cors({
+  origin: "*"
+}); 
 
 @Component({
   selector: 'app-login',
@@ -48,6 +55,7 @@ export class LoginComponent {
     
   }
   Authentication() {
+   
     this.http.get('http://localhost:7300/credentials').subscribe((data) => {
     this.passwordright = false; 
     this.emailright = false; 
@@ -62,14 +70,11 @@ export class LoginComponent {
 
 
         for (this.i = 0; this.i < this.templateInJsonFormat.countries.length; this.i++) {
-          if (this.templateInJsonFormat.countries[this.i].emaillogin == this.email) {
+          if (this.templateInJsonFormat.countries[this.i].emaillogin == this.email && this.templateInJsonFormat.countries[this.i].passwordlogin == this.password) {
             console.log("ye"); 
             return this.emailright = true;
-          }
-          if (this.templateInJsonFormat.countries[this.i].passwordlogin == this.password) {
             return this.passwordright = true;
           }
-            
         }
         return false;
     });
